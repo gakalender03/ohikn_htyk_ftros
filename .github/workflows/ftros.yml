@@ -1,0 +1,35 @@
+name: Run Node.js Script from Private Repo
+
+on:
+  push:
+    branches:
+      - main  # Trigger this action on push to the public repo's main branch
+  workflow_dispatch:
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS }}
+      run: node chunk.js  # Run the script from the private repo
+      continue-on-error: true
