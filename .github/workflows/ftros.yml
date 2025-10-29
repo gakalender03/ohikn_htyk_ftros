@@ -25,13 +25,14 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install ethers axios crypto readline
+      run: npm install ethers axios crypto readline solc @openzeppelin/contracts
   # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
           RPC_URL: ${{ secrets.RPC_URL }}
           PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS }}
-      run: node --trace-warnings chunkros.js
+      run: node --trace-warnings chunkarc.js
+       
   # Run the script from the private repo
       continue-on-error: true
