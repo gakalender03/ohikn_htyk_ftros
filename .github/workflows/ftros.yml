@@ -25,7 +25,10 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install ethers axios crypto readline solc @openzeppelin/contracts
+      run: npm install ethers axios crypto readline solc
+    - name: install opena
+      run: npm install @openzeppelin/contracts
+
   # Install dependencies if needed
 
     - name: Run Node.js script from private repo
