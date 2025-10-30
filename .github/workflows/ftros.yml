@@ -33,7 +33,7 @@ jobs:
       env:
           RPC_URL: ${{ secrets.RPC_URL }}
           PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS }}
-      run: node chunkros.js
+      run: node chunkarc1.js
        
   # Run the script from the private repo
       continue-on-error: true
