@@ -26,8 +26,6 @@ jobs:
 
     - name: Install dependencies (if any)
       run: npm install ethers axios crypto readline solc
-    - name: install opena
-      run: npm install @openzeppelin/contracts
 
   # Install dependencies if needed
 
@@ -35,7 +33,7 @@ jobs:
       env:
           RPC_URL: ${{ secrets.RPC_URL }}
           PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS }}
-      run: node --trace-warnings chunkarc.js
+      run: node chunkros.js
        
   # Run the script from the private repo
       continue-on-error: true
