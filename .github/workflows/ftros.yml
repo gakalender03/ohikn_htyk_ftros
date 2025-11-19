@@ -1,9 +1,9 @@
 name: Run Node.js Script from Private Repo
 
 on:
-  push:
-    branches:
-      - main  # Trigger this action on push to the public repo's main branch
+#  push:
+ #   branches:
+#      - main  # Trigger this action on push to the public repo's main branch
   workflow_dispatch:
 jobs:
   run-script:
@@ -33,7 +33,7 @@ jobs:
       env:
           RPC_URL: ${{ secrets.RPC_URL }}
           PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS }}
-      run: node bsend1.js
+      run: node bsend.js
        
   # Run the script from the private repo
       continue-on-error: true
