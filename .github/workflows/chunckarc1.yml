@@ -25,7 +25,7 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
@@ -57,7 +57,8 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc
+ # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
@@ -88,7 +89,8 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc
+ # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
@@ -119,7 +121,8 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc
+ # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
@@ -150,7 +153,8 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc
+ # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
@@ -181,7 +185,8 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc
+  # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
@@ -213,7 +218,8 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc
+ # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
@@ -244,7 +250,8 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc
+ # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
@@ -275,7 +282,8 @@ jobs:
         node-version: '18'  # Set your required Node.js version
 
     - name: Install dependencies (if any)
-      run: npm install  # Install dependencies if needed
+      run: npm install ethers axios crypto readline solc
+ # Install dependencies if needed
 
     - name: Run Node.js script from private repo
       env:
