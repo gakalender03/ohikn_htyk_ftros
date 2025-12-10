@@ -1,0 +1,350 @@
+name: Run Node.js Script from Private Repo
+
+on:
+ # push:
+  #  branches:
+  #    - main  # Trigger this action on push to the public repo's main branch
+  workflow_dispatch:
+jobs:
+  run-script1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL1 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS1 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js  
+        
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script2:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL2 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS2 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js  
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script3:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL3 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS3 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js  
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script4:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL4 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS4 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script5:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL5 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS5 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script6:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL6 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS6 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js  
+        
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script7:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL7 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS7 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js  
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script8:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL8 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS8 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js  
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script9:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL9 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS9 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script10:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL10 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS10 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js
+      #run: node addlp5.js
+      continue-on-error: true
+
+  run-script11:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v3  # This checks out the public repo
+
+    - name: Checkout private repo
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ secrets.PRIVATE_REPO_NAME }}  # URL of your private repo
+        token: ${{ secrets.GH_PRIVATE_TOKEN }}  # Use the GitHub token for private repo access
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Set your required Node.js version
+
+    - name: Install dependencies (if any)
+      run: npm install  # Install dependencies if needed
+
+    - name: Run Node.js script from private repo
+      env:
+          RPC_URL: ${{ secrets.RPC_URL11 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS11 }}
+      run: |
+        curl https://api.ipify.org
+        node chunkarc1.js
+      #run: node addlp5.js
+      continue-on-error: true
