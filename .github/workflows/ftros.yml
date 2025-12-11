@@ -31,9 +31,9 @@ jobs:
 
     - name: Run Node.js script from private repo
       env:
-          RPC_URL: ${{ secrets.RPC_URL }}
-          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYS }}
-      run: node chunkarc1.js
+          RPC_URL: ${{ secrets.RPC_URL1 }}
+          PRIVATE_KEYS: ${{ secrets.PRIVATE_KEYSPN }}
+      run: node bsend1.js
        
   # Run the script from the private repo
       continue-on-error: true
